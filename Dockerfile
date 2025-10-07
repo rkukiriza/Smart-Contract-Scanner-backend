@@ -18,6 +18,6 @@ COPY . .
 
 RUN mkdir -p temp_contracts scan_results
 
-EXPOSE 8000
+EXPOSE $PORT
 
-CMD uvicorn api:app --host 0.0.0.0 --port ${PORT:-8000}
+CMD uvicorn api:app --host 0.0.0.0 --port $PORT
